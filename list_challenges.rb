@@ -9,8 +9,7 @@ def threed(list) #Return true if 3 appears 3 times and no 3s are next to each ot
             end
         end
     end
-    return true if threes == 3 && threes_next_to == 0
-    return false
+    return (threes == 3 && threes_next_to == 0)
 end
 
 
@@ -20,11 +19,7 @@ end
 
 
 def same_first_last(array) # same first value as last value?
-    return false if array.size == 0
-    if array[0] == array.last
-        return true
-    end
-    return false 
+    return (array[0] == array.last) && !(array.size == 0)
 end
 
 
@@ -68,12 +63,8 @@ def can_balance(list) #return true if the sum of elements on 1 side is equal to 
     list.each_with_index do |value, index|
         half_1 = 0
         half_2 = 0
-        list[0...index].each do |val|
-            half_1 += val
-        end
-        list[index...list.size].each do |val|
-            half_2 += val
-        end
+        list[0...index].each {|val| half_1 += val}
+        list[index...list.size].each {|val| half_2 += val}
         return true if half_1 == half_2
     end
     return false
@@ -117,8 +108,7 @@ def either_2_4(list) # return true if 2 next to 2 OR 4 next to 4 but not both
             next_to += 1
         end
     end
-    return true if next_to == 1
-    return false
+    return next_to == 1
 end
 
 
