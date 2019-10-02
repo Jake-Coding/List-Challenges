@@ -14,7 +14,7 @@ end
 
 
 def same_first_last(array) # same first value as last value?
-    return (array[0] == array.last && !(array.size == 0) )
+    return (array[0] == array.last && !(array.size == 0))
 end
 
 
@@ -126,5 +126,6 @@ end
 def merge(list1, list2) #given 2 lists, return a list in ascending order
     return (list1+list2).sort # easy way
 end
+
 
 # puts merge([1,2,8], [4,9,10]) #[1,2,4,8,9,10]
