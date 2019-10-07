@@ -4,10 +4,9 @@
 
 In this repo there are 2 files
 1. list_challenges.rb
+    1. list_challenges assignment
 2. smol_challenge.rb
-
-list_challenges is the list_challenges assignment
-smol_challenge is my attempt to make the code run in as few lines as possible, regardless of complexity
+    1. my attempt to make the code run in as few lines as possible, regardless of complexity
 
 ## How to run
 
