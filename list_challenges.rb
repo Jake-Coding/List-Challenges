@@ -29,12 +29,12 @@ end
 
 
 def get_sandwich(string) # return whatever is between the bread
-    return "" if string.scan(/bread/).length != 2
+    return "" if string.scan(/bread/).length != 2 # Return "" if 'bread' doesn't appear twice
     new_str = ""
     (string.size-4).times do |i|
         if string[i..i+4] == 'bread'
             val = i+5
-            until string[val..val+4] == 'bread'
+            until string[val..val+4] == 'bread' # begin checking past the first bread until another bread is found
                 new_str += string[val]
                 val += 1
             end
@@ -63,8 +63,8 @@ def can_balance(list) #return true if the sum of elements on 1 side is equal to 
     list.each_with_index do |value, index|
         half_1 = 0
         half_2 = 0
-        list[0...index].each {|val| half_1 += val}
-        list[index...list.size].each {|val| half_2 += val}
+        list[0...index].each {|val| half_1 += val} # add the first half
+        list[index...list.size].each {|val| half_2 += val} # add the second half
         return true if half_1 == half_2
     end
     return false
@@ -159,11 +159,11 @@ end
 
 def merge(list1, list2) #given 2 lists, return a list in ascending order
     new_list = []
-    big_list = list1 + list2
+    big_list = list1 + list2 # concatenate the lists
     big_list.size.times do
-        min = big_list.min
-        new_list.push(min)
-        big_list.delete_at(big_list.index(min))
+        min = big_list.min # find the min
+        new_list.push(min) # add the min to the new list
+        big_list.delete_at(big_list.index(min)) # delete the min from the big list
     end
     return new_list
     #return (list1+list2).sort # easy way
